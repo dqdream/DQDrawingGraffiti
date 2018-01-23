@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/main"
+   >
+
+    <Button
+        android:id="@+id/btnMainNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="115dp"
+        android:background="@drawable/sel_btn_main_new"
+        android:text="新建" />
+
+    <Button
+        android:id="@+id/btnMainLoad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMainNew"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/sel_btn_main_new"
+        android:text="加载" />
+
+    <RelativeLayout
+        android:id="@+id/relMainDrawSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnMainLoad"
+        android:layout_centerHorizontal="true"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textMainWidth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editMainWidth"
+            android:layout_alignBottom="@+id/editMainWidth"
+            android:layout_marginLeft="20dip"
+            android:text="宽度:"
+            android:textSize="20dip" />
+
+        <EditText
+            android:id="@+id/editMainWidth"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/textMainWidth"
+            android:ems="10"
+            android:numeric="integer"
+            android:text="720" />
+
+        <TextView
+            android:id="@+id/textMainHight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editMainHight"
+            android:layout_alignBottom="@+id/editMainHight"
+            android:layout_below="@id/textMainWidth"
+            android:layout_marginLeft="20dip"
+            android:text="高度:"
+            android:textSize="20dip" />
+
+        <EditText
+            android:id="@+id/editMainHight"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textMainWidth"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@+id/textMainHight"
+            android:ems="10"
+            android:numeric="integer"
+            android:text="1280" />
+
+        <Button
+            android:id="@+id/btnMainYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editMainHight"
+            android:layout_marginRight="20dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/sel_btn_main_width"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/btnMainNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editMainHight"
+            android:layout_marginTop="10dip"
+            android:layout_toRightOf="@id/btnMainYes"
+            android:background="@drawable/sel_btn_main_width"
+            android:text="取消" />
+    </RelativeLayout>
+
+</RelativeLayout>

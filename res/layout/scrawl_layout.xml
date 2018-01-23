@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.sxdtdx.fourscrawl.view.MainDraw
+        android:id="@+id/scrawMainDraw"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.sxdtdx.fourscrawl.view.MainDraw>
+
+    <ImageView
+        android:id="@+id/imgScrawToolSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/marking_menu_affordance50_jb" />
+
+    <LinearLayout
+        android:id="@+id/linScrawTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/hotseat_bg_center"
+        android:orientation="vertical"
+        android:padding="5dip"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5" >
+
+            <Button
+                android:id="@+id/rbtnScrawMove"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_move"
+                android:text="滚动" />
+
+            <Button
+                android:id="@+id/rbtnScrawZoom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_zoom"
+                android:paddingTop="6dip"
+                android:text="缩放" />
+
+            <Button
+                android:id="@+id/rbtnScrawClear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_clear"
+                android:paddingTop="5dip"
+                android:text="清屏" />
+
+            <Button
+                android:id="@+id/rbtnScrawSave"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_save"
+                android:paddingTop="7dip"
+                android:text="保存" />
+
+            <Button
+                android:id="@+id/rbtnScrawFill"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/ic_tool_fill"
+                android:paddingTop="5dip"
+                android:text="填充" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5" >
+
+            <Button
+                android:id="@+id/rbtnScrawSet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_set"
+                android:paddingTop="6dip"
+                android:text="设置" />
+
+            <Button
+                android:id="@+id/rbtnScrawPen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/ic_tool_brush"
+                android:paddingTop="7dip"
+                android:text="画笔" />
+
+            <Button
+                android:id="@+id/rbtnScrawPel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_graph"
+                android:paddingTop="3dip"
+                android:text="图元" />
+
+            <Button
+                android:id="@+id/rbtnScrawPelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/icon_text"
+                android:paddingTop="5dip"
+                android:text="文本" />
+
+            <Button
+                android:id="@+id/rbtnScrawEraser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/sel_btn_scraw_tool"
+                android:drawableTop="@drawable/ic_tool_erase"
+                android:gravity="center"
+                android:paddingTop="8dip"
+                android:text="橡皮" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:visibility="gone"
+        android:id="@+id/seekbarPenZoom"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:max="200"
+        android:maxHeight="12px"
+        android:minHeight="24px"
+        android:layout_below="@id/linScrawTool"
+        android:progress="100"
+        android:progressDrawable="@drawable/bg_bar"
+        android:thumb="@drawable/thumb_bar" />
+
+    <ImageView
+        android:id="@+id/imgScrawUndo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dip"
+        android:background="@drawable/undo"
+        android:src="@drawable/sel_img_scraw_undo"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imgScrawRedo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dip"
+        android:background="@drawable/redo"
+        android:src="@drawable/sel_img_scraw_undo"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linScrawGraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="120dip"
+        android:background="@drawable/hotseat_bg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btnScrawGraphReset"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="完成" />
+
+        <Button
+            android:id="@+id/btnScrawGraphMove"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="平移" />
+
+        <Button
+            android:id="@+id/btnScrawGrapRotato"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旋转" />
+
+        <Button
+            android:id="@+id/btnScrawGraphZoom"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="缩放" />
+
+
+        <Button
+            android:id="@+id/btnScrawGraphCut"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剪切" />
+
+        <Button
+            android:id="@+id/btnScrawGraphPaste"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复制" />
+
+        <Button
+            android:id="@+id/btnScrawGraphDelete"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="删除" />
+
+        <Button
+            android:id="@+id/btnScrawGraphCancle"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="隐藏" />
+    </LinearLayout>
+
+</RelativeLayout>
